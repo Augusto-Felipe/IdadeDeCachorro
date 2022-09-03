@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var legendaResultado: UILabel!
+    @IBOutlet weak var campoIdadeCachorro: UITextField!
+    
     
     //Executa sempre que a tela é carregada
     override func viewDidLoad() {
@@ -20,8 +22,8 @@ class ViewController: UIViewController {
     //Botão Calcular Idade
     @IBAction func calcularIdade(_ sender: Any) {
         
-        legendaResultado.text = "A idade do cachorro em anos humanos é: 14"
-        
+        let idade = Int(campoIdadeCachorro.text!)! * 7
+        legendaResultado.text = "A idade do cachorro é: " + String(idade)
     }
 }
 
